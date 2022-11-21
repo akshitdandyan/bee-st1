@@ -34,6 +34,19 @@ app.post("/add", (req, res) => {
         ).toFixed(2),
     };
 
+    const grade =
+        data.average >= 90
+            ? "A"
+            : data.average >= 80
+            ? "B"
+            : data.average >= 70
+            ? "C"
+            : data.average >= 60
+            ? "D"
+            : "E";
+
+    data.grade = grade;
+
     // append data to ./data.json
     fs.readFile(__dirname + "/data.json", (err, file) => {
         if (err) {

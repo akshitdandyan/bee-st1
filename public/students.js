@@ -18,6 +18,7 @@ async function getStudents() {
                 "Hindi",
                 "Total Marks",
                 "Average",
+                "Grade",
             ];
 
             tr.innerHTML = `
@@ -32,6 +33,7 @@ async function getStudents() {
                 <td>${student.hindi}</td>
                 <td>${student.totalMarks}</td>
                 <td>${student.average}</td>
+                <td>${student.grade}</td>
             `;
             studentsTable.appendChild(tr);
         });
